@@ -1,5 +1,6 @@
-# Motif-based Graph Self-Supervised Learning forMolecular Property Prediction
-Official implementation of "Motif-based Graph Self-Supervised Learning forMolecular Property Prediction"
+# Motif-based Graph Self-Supervised Learning for Molecular Property Prediction
+Official implementation of "Motif-based Graph Self-Supervised Learning for Molecular Property Prediction"
+(https://arxiv.org/abs/2110.00987). 
 ## Requirements
 
 ## Training
