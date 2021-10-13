@@ -1,18 +1,15 @@
 # Motif-based Graph Self-Supervised Learning for Molecular Property Prediction
-Official implementation of "Motif-based Graph Self-Supervised Learning for Molecular Property Prediction"
+Official Pytorch implementation of "Motif-based Graph Self-Supervised Learning for Molecular Property Prediction"
 (https://arxiv.org/abs/2110.00987). 
 ## Requirements
 ```
-pytorch                   1.0.1
-torch-cluster             1.2.4              
-torch-geometric           1.0.3
-torch-scatter             1.1.2 
-torch-sparse              0.2.4
-torch-spline-conv         1.0.6
-rdkit                     2019.03.1.0
+pytorch                   1.7.0             
+torch-geometric           1.6.3
+rdkit                     2021.03.1
 tqdm                      4.31.1
 tensorboardx              1.6
 ```
+To install RDKit, please follow the instructions here http://www.rdkit.org/docs/Install.html
 ## Training
 
 ## Evaluation
