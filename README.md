@@ -1,5 +1,5 @@
 # Motif-based Graph Self-Supervised Learning for Molecular Property Prediction
-Official Pytorch implementation of "Motif-based Graph Self-Supervised Learning for Molecular Property Prediction"
+Official Pytorch implementation of NeurIPS'21 paper "Motif-based Graph Self-Supervised Learning for Molecular Property Prediction"
 (https://arxiv.org/abs/2110.00987). 
 ## Requirements
 ```
@@ -14,12 +14,14 @@ To install RDKit, please follow the instructions here http://www.rdkit.org/docs/
 * `motif_based_pretrain/` contains codes for motif-based graph self-supervised pretraining.
 * `finetune/` contains codes for finetuning on MoleculeNet benchmarks for evaluation.
 ## Training
+You can pretrain the model by
 ```
 cd motif_based_pretrain
 python pretrain_motif.py
 ```
 
 ## Evaluation
+You can evaluate the pretrained model by finetuning on downstream tasks
 ```
 cd finetune
 python finetune.py
