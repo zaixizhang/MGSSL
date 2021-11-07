@@ -4,7 +4,7 @@ Official Pytorch implementation of NeurIPS'21 paper "Motif-based Graph Self-Supe
 ## Requirements
 ```
 pytorch                   1.8.1             
-torch-geometric           1.6.3
+torch-geometric           1.7.0
 rdkit                     2020.09.1
 tqdm                      4.31.1
 tensorboardx              1.6
