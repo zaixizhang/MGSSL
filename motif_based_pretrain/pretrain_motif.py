@@ -40,7 +40,7 @@ def train(args, model_list, loader, optimizer_list, device):
     optimizer_model, optimizer_motif = optimizer_list
 
     model.train()
-    vae_model.train()
+    motif_model.train()
     word_acc, topo_acc = 0, 0
     for step, batch in enumerate(tqdm(loader, desc="Iteration")):
 
@@ -60,7 +60,7 @@ def train(args, model_list, loader, optimizer_list, device):
         loss.backward()
 
         optimizer_model.step()
-        optimizer_vae.step()
+        optimizer_motif.step()
 
         word_acc += wacc
         topo_acc += tacc
@@ -97,7 +97,7 @@ def main():
     parser.add_argument('--dataset', type=str, default='../data/zinc/all.txt',
                         help='root directory of dataset. For now, only classification.')
     parser.add_argument('--gnn_type', type=str, default="gin")
-    parser.add_argument('--input_model_file', type=str, default='', help='filename to read the model (if there is any)')
+    parser.add_argument('--input_model_file', type=str, default='./saved_model/init', help='filename to read the model (if there is any)')
     parser.add_argument('--output_model_file', type=str, default='./saved_model/motif_pretrain',
                         help='filename to output the pre-trained model')
     parser.add_argument('--num_workers', type=int, default=8, help='number of workers for dataset loading')
@@ -128,7 +128,7 @@ def main():
 
     model_list = [model, motif_model]
     optimizer_model = optim.Adam(model.parameters(), lr=args.lr, weight_decay=args.decay)
-    optimizer_motif = optim.Adam(vae_model.parameters(), lr=1e-3, weight_decay=args.decay)
+    optimizer_motif = optim.Adam(motif_model.parameters(), lr=1e-3, weight_decay=args.decay)
 
     optimizer_list = [optimizer_model, optimizer_motif]
 
