@@ -94,7 +94,7 @@ def main():
                         help='graph level pooling (sum, mean, max, set2set, attention)')
     parser.add_argument('--JK', type=str, default="last",
                         help='how the node features across layers are combined. last, sum, max or concat')
-    parser.add_argument('--dataset', type=str, default='../data/zinc/all.txt',
+    parser.add_argument('--dataset', type=str, default='./data/zinc/all.txt',
                         help='root directory of dataset. For now, only classification.')
     parser.add_argument('--gnn_type', type=str, default="gin")
     parser.add_argument('--input_model_file', type=str, default='./saved_model/init', help='filename to read the model (if there is any)')
@@ -103,7 +103,7 @@ def main():
     parser.add_argument('--num_workers', type=int, default=8, help='number of workers for dataset loading')
     parser.add_argument("--hidden_size", type=int, default=300, help='hidden size')
     parser.add_argument("--latent_size", type=int, default=56, help='latent size')
-    parser.add_argument("--vocab", type=str, default='../data/zinc/clique.txt', help='vocab path')
+    parser.add_argument("--vocab", type=str, default='./data/zinc/clique.txt', help='vocab path')
     parser.add_argument('--order', type=str, default="bfs",
                         help='motif tree generation order (bfs or dfs)')
     args = parser.parse_args()
