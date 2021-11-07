@@ -128,7 +128,7 @@ def main():
 
     model_list = [model, motif_model]
     optimizer_model = optim.Adam(model.parameters(), lr=args.lr, weight_decay=args.decay)
-    optimizer_motif = optim.Adam(vae_model.parameters(), lr=1e-3, weight_decay=args.decay)
+    optimizer_motif = optim.Adam(motif_model.parameters(), lr=1e-3, weight_decay=args.decay)
 
     optimizer_list = [optimizer_model, optimizer_motif]
 
