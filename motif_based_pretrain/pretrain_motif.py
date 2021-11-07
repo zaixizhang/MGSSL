@@ -40,7 +40,7 @@ def train(args, model_list, loader, optimizer_list, device):
     optimizer_model, optimizer_motif = optimizer_list
 
     model.train()
-    vae_model.train()
+    motif_model.train()
     word_acc, topo_acc = 0, 0
     for step, batch in enumerate(tqdm(loader, desc="Iteration")):
 
@@ -60,7 +60,7 @@ def train(args, model_list, loader, optimizer_list, device):
         loss.backward()
 
         optimizer_model.step()
-        optimizer_vae.step()
+        optimizer_motif.step()
 
         word_acc += wacc
         topo_acc += tacc
