@@ -12,7 +12,7 @@ import numpy as np
 from optparse import OptionParser
 from gnn_model import GNN
 
-sys.path.append('../util/')
+sys.path.append('./util/')
 
 from mol_tree import *
 from nnutils import *
