@@ -185,19 +185,6 @@ def main():
     optimizer = optim.Adam(model_param_group, lr=args.lr, weight_decay=args.decay)
     print(optimizer)
 
-    train_acc_list = []
-    val_acc_list = []
-    test_acc_list = []
-
-
-    if not args.filename == "":
-        fname = 'runs/finetune_cls_runseed' + str(args.runseed) + '/' + args.filename
-        #delete the directory if there exists one
-        if os.path.exists(fname):
-            shutil.rmtree(fname)
-            print("removed the existing file.")
-        writer = SummaryWriter(fname)
-
     for epoch in range(1, args.epochs+1):
         print("====epoch " + str(epoch))
         
@@ -213,25 +200,6 @@ def main():
         test_acc = eval(args, model, device, test_loader)
 
         print("train: %f val: %f test: %f" %(train_acc, val_acc, test_acc))
-
-        val_acc_list.append(val_acc)
-        test_acc_list.append(test_acc)
-        train_acc_list.append(train_acc)
-
-        if not args.filename == "":
-            writer.add_scalar('data/train auc', train_acc, epoch)
-            writer.add_scalar('data/val auc', val_acc, epoch)
-            writer.add_scalar('data/test auc', test_acc, epoch)
-
-        print("")
-    print('best auc: ', test_acc_list[val_acc_list.index(max(val_acc_list))])
-
-    np.save('./training_history/gpttrain_'+args.dataset+'.npy', np.array(train_acc_list))
-    np.save('./training_history/gptval_'+args.dataset+'.npy', np.array(val_acc_list))
-    np.save('./training_history/gpttest_' + args.dataset + '.npy', np.array(test_acc_list))
-
-    if not args.filename == "":
-        writer.close()
 
 if __name__ == "__main__":
     main()
