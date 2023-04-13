@@ -105,7 +105,7 @@ def main():
                         help='how the node features across layers are combined. last, sum, max or concat')
     parser.add_argument('--gnn_type', type=str, default="gin")
     parser.add_argument('--dataset', type=str, default = 'sider', help='root directory of dataset. For now, only classification.')
-    parser.add_argument('--input_model_file', type=str, default = '../motif_based_pretrain/saved_model/motif_pretrain.pth', help='filename to read the model (if there is any)')
+    parser.add_argument('--input_model_file', type=str, default = '../motif_based_pretrain/saved_model/pretrained.pth', help='filename to read the model (if there is any)')
     parser.add_argument('--filename', type=str, default = '', help='output filename')
     parser.add_argument('--seed', type=int, default=42, help = "Seed for splitting the dataset.")
     parser.add_argument('--runseed', type=int, default=0, help = "Seed for minibatch selection, random initialization.")
