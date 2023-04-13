@@ -13,6 +13,10 @@ To install RDKit, please follow the instructions here http://www.rdkit.org/docs/
 
 * `motif_based_pretrain/` contains codes for motif-based graph self-supervised pretraining.
 * `finetune/` contains codes for finetuning on MoleculeNet benchmarks for evaluation.
+
+## Dataset
+For the dataset, please download from [data](http://snap.stanford.edu/gnn-pretrain/data/chem_dataset.zip).
+
 ## Training
 You can pretrain the model by
 ```
