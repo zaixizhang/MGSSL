@@ -15,7 +15,7 @@ To install RDKit, please follow the instructions here http://www.rdkit.org/docs/
 * `finetune/` contains codes for finetuning on MoleculeNet benchmarks for evaluation.
 
 ## Dataset
-For the dataset, please download from [data](http://snap.stanford.edu/gnn-pretrain/data/chem_dataset.zip).
+For the MoleculeNet dataset for finetuning, we have uploaded them to [data](https://github.com/zaixizhang/MGSSL/tree/main/finetune/dataset.zip).
 
 ## Training
 You can pretrain the model by
