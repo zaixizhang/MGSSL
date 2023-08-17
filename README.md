@@ -1,6 +1,6 @@
 # Motif-based Graph Self-Supervised Learning for Molecular Property Prediction
 Official Pytorch implementation of NeurIPS'21 paper "Motif-based Graph Self-Supervised Learning for Molecular Property Prediction"
-(https://arxiv.org/abs/2110.00987). 
+(https://arxiv.org/abs/2305.13997). 
 ## Requirements
 ```
 pytorch                   1.8.1             
